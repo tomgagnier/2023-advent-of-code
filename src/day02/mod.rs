@@ -73,6 +73,7 @@ fn score(limit: &Bag, input: &&str) -> u32 {
 
 fn power(input: &&str) -> u32 {
     parse_games(input).iter().map(|game| {
+
         let mut power = Bag { red: 1, blue: 1, green: 1 };
         for bag in &game.rounds {
             power = power.max(bag);
